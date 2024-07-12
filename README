@@ -1,0 +1,28 @@
+HOW TO RUN
+
+    1. Create a configuration file named 'config.ini' (make sure you use that exact name):
+       
+    2. Create a new section in this file for each username-password pair (for easy use with multiple accounts). For an account with username 'foo' and password 'bar', it would look like the following:
+
+        [section1]
+        username = foo
+        password = bar
+
+    2. Run 'python3 unfollow.py [section name of username-password pai]' (for the above example, this would be 'python3 sdfs ') sjfsdfs kdkd 
+
+    4. Run 'python3 main.py'
+       
+EXCLUSIONS
+
+There are certain accounts that you may want to exclude from the search of accounts that don't follow you back (i.e. Celebrity accounts). To achieve this, modify your 'config.ini' file by adding a new key value pair:
+      
+        [section1]
+        username = foo
+        password = bar
+        exclusions = [
+          "celeb1",
+          "celeb2",
+          "celeb3"
+        ]
+
+Then simply run the program with the '-e' flag: 'python3 unfollow.py section1 -e'
